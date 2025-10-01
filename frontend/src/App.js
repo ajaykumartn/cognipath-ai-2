@@ -7,7 +7,7 @@ import PublicReportPage from './components/PublicReportPage';
 import './App.css';
 import './components/QuizPage.css'; // Import the new quiz styles
 
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = 'https://cognipath-ai-2.onrender.com';
 
 // ==================================
 //        AUTHENTICATION PAGE
