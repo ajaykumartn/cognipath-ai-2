@@ -1,0 +1,37 @@
+/* --- Global Styles & Animations --- */
+:root { --primary-color: #61dafb; --dark-bg: #20232a; --medium-bg: #282c34; --light-bg: #3a404a; --text-color: #f0f0f0; --success-color: #28a745; --danger-color: #dc3545; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: var(--medium-bg); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- Auth Page Styles --- */
+.auth-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; animation: fadeIn 0.5s; }
+.auth-card { background-color: var(--light-bg); padding: 40px; border-radius: 12px; width: 90%; max-width: 420px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); text-align: center; }
+.auth-logo { cursor: pointer; font-size: 1.8em; font-weight: bold; color: var(--primary-color); margin-bottom: 20px; }
+.auth-card h2 { margin-top: 0; color: var(--text-color); }
+.auth-card form input, .auth-card form select { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #555; background-color: var(--medium-bg); color: white; font-size: 1em; box-sizing: border-box; }
+.auth-card .submit-btn { width: 100%; border: none; padding: 15px; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background-color 0.2s; background-color: var(--primary-color); color: var(--dark-bg); }
+.auth-card .submit-btn:hover { background-color: #88eaff; }
+.toggle-auth { margin-top: 20px; cursor: pointer; color: var(--primary-color); font-size: 0.9em; }
+.update-message { font-weight: bold; color: var(--success-color); }
+.error-message { color: var(--danger-color); }
+
+/* --- Quiz Page Styles --- */
+.quiz-container { display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box; animation: fadeIn 0.5s; }
+.quiz-header { width: 100%; max-width: 800px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.end-session-btn { background: var(--danger-color); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.quiz-card { background-color: var(--light-bg); border-radius: 12px; padding: 25px; width: 100%; max-width: 800px; box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
+.question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.difficulty-badge { background-color: var(--primary-color); color: var(--dark-bg); padding: 5px 12px; border-radius: 12px; font-size: 0.8em; font-weight: bold; }
+.question-text { font-size: 1.3em; line-height: 1.5; color: var(--text-color); text-align: left; }
+.options-container { display: grid; grid-template-columns: 1fr; gap: 15px; margin: 25px 0; }
+.option-btn { background-color: #4a505a; color: white; border: 2px solid #5a606a; padding: 15px; border-radius: 8px; font-size: 1em; cursor: pointer; transition: all 0.2s ease-in-out; text-align: left; }
+.option-btn:hover:not(:disabled) { border-color: var(--primary-color); }
+.option-btn.selected { background-color: var(--primary-color); color: var(--dark-bg); border-color: var(--primary-color); }
+.option-btn.correct { background-color: var(--success-color); border-color: var(--success-color); color: white; }
+.option-btn.incorrect { background-color: var(--danger-color); border-color: var(--danger-color); color: white; }
+.quiz-feedback { margin-top: 20px; padding: 15px; border-radius: 12px; width: 100%; max-width: 800px; transition: all 0.3s; }
+.quiz-feedback.correct-fb { background-color: #28a745a0; }
+.quiz-feedback.incorrect-fb { background-color: #dc3545a0; }
+
+@media (min-width: 768px) { .options-container { grid-template-columns: 1fr 1fr; } }
+

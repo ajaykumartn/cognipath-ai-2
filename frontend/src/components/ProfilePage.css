@@ -1,0 +1,208 @@
+:root {
+    --dark-bg: #16191f;
+    --medium-bg: #1f232b;
+    --light-bg: #2c323f;
+    --primary-color: #00ffff;
+    --text-color: #f0f0f0;
+}
+
+.profile-page-container {
+    background-color: var(--dark-bg);
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.profile-header {
+    background-color: var(--medium-bg);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.profile-header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.profile-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-card {
+    background-color: var(--medium-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--light-bg);
+}
+
+.profile-card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--light-bg);
+    padding-bottom: 10px;
+}
+
+/* Exam Options Card */
+.exam-options p {
+    margin-bottom: 20px;
+}
+.exam-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.exam-btn.adaptive {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    text-align: left;
+    margin-bottom: 20px;
+}
+.exam-btn.adaptive:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+.exam-btn.adaptive span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    opacity: 0.8;
+}
+.difficulty-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.exam-btn.difficulty {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+.exam-btn.difficulty:hover {
+    background-color: #454c5a;
+    color: var(--primary-color);
+}
+
+
+/* User Details Card */
+.user-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+.form-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--light-bg);
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+.form-group input:disabled {
+    background-color: #2a2e37;
+    cursor: not-allowed;
+}
+.update-btn {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.update-message {
+    text-align: center;
+    margin-top: 10px;
+    color: #28a745; /* Green for success */
+}
+.error-message {
+    color: #dc3545; /* Red for error */
+}
+
+/* Dashboard Wrapper */
+.dashboard-wrapper {
+    padding-bottom: 30px;
+}
+
+.share-report-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.share-report-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

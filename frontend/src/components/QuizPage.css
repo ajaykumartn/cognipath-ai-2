@@ -1,0 +1,163 @@
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease-in-out;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+.quiz-header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.end-session-btn {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.end-session-btn:hover {
+    background-color: #c82333;
+}
+
+.quiz-card {
+    background-color: var(--medium-bg); /* Slightly lighter than page bg */
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    background-color: var(--light-bg);
+}
+.quiz-feedback.correct-fb { background-color: rgba(40, 167, 69, 0.3); border: 1px solid var(--success-color); }
+.quiz-feedback.incorrect-fb { background-color: rgba(220, 53, 69, 0.3); border: 1px solid var(--danger-color); }
+
+.quiz-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.quiz-actions button {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quiz-actions button:hover:not(:disabled) {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.quiz-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hint-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffc10730;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    font-style: italic;
+    animation: fadeIn 0.3s;
+}
+
+/* --- Modal Styles --- */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--medium-bg);
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    animation: slideInUp 0.3s ease-out;
+}
+
+.modal-content h2 { margin-top: 0; color: var(--primary-color); }
+.modal-content textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--light-bg);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-actions button:first-child { background-color: var(--light-bg); color: var(--text-color); }
+.modal-actions button:last-child { background-color: var(--primary-color); color: var(--dark-bg); }
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--primary-color);
+}
+
